@@ -1,4 +1,7 @@
+using System.Reflection;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AstroShift
 {
@@ -6,12 +9,12 @@ namespace AstroShift
     {
         public void LoadScene(int index)
         {
-
+            SceneManager.LoadScene(index);
         }
 
-        public void GetActiveScene()
+        public void ReloadScene()
         {
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

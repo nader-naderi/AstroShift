@@ -45,11 +45,6 @@ namespace NDR2DWorldGenerator
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                RemoveChunks();
-                GenerateMap();
-            }
         }
 
         private void DrawCavesAndOres()
@@ -223,6 +218,7 @@ namespace NDR2DWorldGenerator
                                         CreateTile(x, y + 1, currentBiome.tileAtlas.tallGrass.tileSprites);
                         }
                     }
+
                 }
             }
         }

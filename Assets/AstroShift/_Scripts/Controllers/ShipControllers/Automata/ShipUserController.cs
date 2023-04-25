@@ -16,9 +16,8 @@ namespace AstroShift
         {
             controller.Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             controller.Rotate(Input.GetAxis("Horizontal"));
-            
-            if(Input.GetKey(KeyCode.Space))
-                controller.Boost();
+
+            controller.IsBoosting = Input.GetKey(KeyCode.Space);
         }
     }
 }

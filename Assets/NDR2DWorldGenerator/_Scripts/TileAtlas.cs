@@ -8,6 +8,7 @@ namespace NDR2DWorldGenerator
     public class TileAtlas : ScriptableObject
     {
         [Header("Environment")]
+        public Tile empty;
         public Tile grass;
         public Tile dirt;
         public Tile stone;

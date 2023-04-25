@@ -54,17 +54,9 @@ namespace AstroShift
             RotateDirection = new Vector3(0f, 0f, -horizontal);
         }
 
-        public void Boost(float amount = 100)
-        {
-            foreach (IModule module in Modules)
-                if (module is BoosterModule)
-                    module.Perform();
-        }
-
         public void UpdateModules()
         {
             foreach (IModule module in Modules)
-                if (!(module is BoosterModule))
                     module.Perform();
         }
     }

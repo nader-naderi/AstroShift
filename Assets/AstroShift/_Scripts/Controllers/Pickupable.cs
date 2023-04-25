@@ -6,7 +6,6 @@ namespace AstroShift
     {
         public virtual void OnPickup()
         {
-            Debug.Log("Picked Up");
             Destroy(gameObject);
         }        
 

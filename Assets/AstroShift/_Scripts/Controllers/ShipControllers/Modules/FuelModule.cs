@@ -19,9 +19,12 @@ namespace AstroShift
         {
             currentFuel -= fuelDrainRate * Time.deltaTime;
             currentFuel = Mathf.Clamp(currentFuel, 0f, maximumFuel);
-            
+
             if (Automaton.IsPlayer)
-                UIManager.Instance.UpdateFuelBar(currentFuel, maximumFuel);
+            {
+                UIManager.Instance.UpdateFuelBar(currentFuel);
+                UIManager.Instance.NoFuelAlert.SetActive(IsFuelTankEmpty());
+            }
 
             return currentFuel;
         }
@@ -44,6 +47,9 @@ namespace AstroShift
         public void Perform()
         {
             if (!Automaton.IsOn)
+                return;
+            
+            if (Automaton.MovementDirection == Vector2.zero)
                 return;
 
             Automaton.IsOn = ConsumeFuel() > 0;

@@ -6,14 +6,14 @@ namespace AstroShift
     {
         [SerializeField] private float power = 2f;
         [SerializeField] private float boostDuration = 1.5f;
-
+        [SerializeField] private FuelModule fuel;
         public IAutomatonable Automaton { get; set; }
 
         public bool IsBootedUp { get; private set; }
-        
+
         public void DisableModule()
         {
-
+            IsBootedUp = false;
         }
 
         public void DismantleModule()
@@ -23,7 +23,7 @@ namespace AstroShift
 
         public void EnableModule()
         {
-
+            IsBootedUp = true;
         }
 
         public void Perform()
@@ -31,7 +31,16 @@ namespace AstroShift
             if (!Automaton.IsOn || !IsBootedUp)
                 return;
 
-            Automaton.Rigidbody.AddRelativeForce(power * Automaton.transform.up * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            if (fuel.IsFuelTankEmpty())
+                return;
+
+            if (!Automaton.IsBoosting)
+                return;
+
+            Automaton.Rigidbody.AddRelativeForce(power * Time.fixedDeltaTime * Automaton.transform.up, ForceMode2D.Impulse);
+            fuel.ConsumeFuel();
+
+            Debug.Log("!!");
         }
     }
 }

@@ -53,14 +53,12 @@ namespace AstroShift
 
         public void Move(Vector2 direction)
         {
-            Debug.Log(100 * moveSpeed * Time.deltaTime * direction);
             Automaton.Rigidbody.AddForce(100 * moveSpeed * Time.deltaTime * direction);
         }
 
         public void Rotate(Vector3 direction)
         {
-            Debug.Log(100 * rotateSpeed * Time.deltaTime * direction);
-            Automaton.transform.Rotate(100 * rotateSpeed * Time.deltaTime * direction);
+            Automaton.transform.Rotate(10 * rotateSpeed * Time.deltaTime * direction);
         }
     }
 }
