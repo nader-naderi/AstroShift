@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8044235732339994791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8044235732339994789}
+  - component: {fileID: 8044235732339994790}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8044235732339994789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044235732339994791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.118492, y: 22.20693, z: -3.6990423}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8044235732339994790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044235732339994791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d4fe8015975de4f937d9a74f06ba71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomes:
+  - biomeName: Snow
+    biomeColor: {r: 1, g: 1, b: 1, a: 1}
+    tileAtlas: {fileID: 11400000, guid: 0d39032196f56754ea54988fd35a2f42, type: 2}
+    caveFrequency: 0.03
+    terrianFrequency: 0.03
+    caveNoiseTexture: {fileID: 0}
+    isGeneratingCavesAllowed: 1
+    dirtLayerHeight: 5
+    surfaceValue: 0.66
+    heightMultiplier: 50
+    treeChance: 25
+    minimumTreeHeight: 2
+    maximumTreeHeight: 25
+    tallGrassChance: 2
+    ores:
+    - name: Coal
+      rarity: 0.1
+      size: 0.76
+      maxSpawnHeight: 50
+      spreadTexture: {fileID: 0}
+    - name: Iron
+      rarity: 0.06
+      size: 0.8
+      maxSpawnHeight: 30
+      spreadTexture: {fileID: 0}
+    - name: Gold
+      rarity: 0.06
+      size: 0.85
+      maxSpawnHeight: 20
+      spreadTexture: {fileID: 0}
+    - name: Diamond
+      rarity: 0.03
+      size: 0.83
+      maxSpawnHeight: 10
+      spreadTexture: {fileID: 0}
+  - biomeName: Desert
+    biomeColor: {r: 1, g: 0.43137255, b: 0, a: 1}
+    tileAtlas: {fileID: 11400000, guid: 0d39032196f56754ea54988fd35a2f42, type: 2}
+    caveFrequency: 0.03
+    terrianFrequency: 0.03
+    caveNoiseTexture: {fileID: 0}
+    isGeneratingCavesAllowed: 1
+    dirtLayerHeight: 5
+    surfaceValue: 0.66
+    heightMultiplier: 50
+    treeChance: 25
+    minimumTreeHeight: 4
+    maximumTreeHeight: 25
+    tallGrassChance: 19
+    ores:
+    - name: Coal
+      rarity: 0.1
+      size: 0.76
+      maxSpawnHeight: 50
+      spreadTexture: {fileID: 0}
+    - name: Iron
+      rarity: 0.06
+      size: 0.8
+      maxSpawnHeight: 30
+      spreadTexture: {fileID: 0}
+    - name: Gold
+      rarity: 0.06
+      size: 0.85
+      maxSpawnHeight: 20
+      spreadTexture: {fileID: 0}
+    - name: Diamond
+      rarity: 0.03
+      size: 0.83
+      maxSpawnHeight: 10
+      spreadTexture: {fileID: 0}
+  - biomeName: Grassland
+    biomeColor: {r: 0.21568628, g: 1, b: 0, a: 1}
+    tileAtlas: {fileID: 11400000, guid: 0d39032196f56754ea54988fd35a2f42, type: 2}
+    caveFrequency: 0.06
+    terrianFrequency: 0.03
+    caveNoiseTexture: {fileID: 0}
+    isGeneratingCavesAllowed: 1
+    dirtLayerHeight: 5
+    surfaceValue: 0.66
+    heightMultiplier: 7.9
+    treeChance: 25
+    minimumTreeHeight: 4
+    maximumTreeHeight: 25
+    tallGrassChance: 19
+    ores:
+    - name: Coal
+      rarity: 0.1
+      size: 0.76
+      maxSpawnHeight: 50
+      spreadTexture: {fileID: 0}
+    - name: Iron
+      rarity: 0.06
+      size: 0.8
+      maxSpawnHeight: 30
+      spreadTexture: {fileID: 0}
+    - name: Gold
+      rarity: 0.06
+      size: 0.85
+      maxSpawnHeight: 20
+      spreadTexture: {fileID: 0}
+    - name: Diamond
+      rarity: 0.03
+      size: 0.83
+      maxSpawnHeight: 10
+      spreadTexture: {fileID: 0}
+  - biomeName: Forest
+    biomeColor: {r: 0.10980392, g: 0.39607844, b: 0, a: 1}
+    tileAtlas: {fileID: 11400000, guid: 0d39032196f56754ea54988fd35a2f42, type: 2}
+    caveFrequency: 0.03
+    terrianFrequency: 0.03
+    caveNoiseTexture: {fileID: 0}
+    isGeneratingCavesAllowed: 1
+    dirtLayerHeight: 5
+    surfaceValue: 0.66
+    heightMultiplier: 7.9
+    treeChance: 25
+    minimumTreeHeight: 4
+    maximumTreeHeight: 25
+    tallGrassChance: 19
+    ores:
+    - name: Coal
+      rarity: 0.1
+      size: 0.76
+      maxSpawnHeight: 50
+      spreadTexture: {fileID: 0}
+    - name: Iron
+      rarity: 0.06
+      size: 0.8
+      maxSpawnHeight: 30
+      spreadTexture: {fileID: 0}
+    - name: Gold
+      rarity: 0.06
+      size: 0.85
+      maxSpawnHeight: 20
+      spreadTexture: {fileID: 0}
+    - name: Diamond
+      rarity: 0.03
+      size: 0.83
+      maxSpawnHeight: 10
+      spreadTexture: {fileID: 0}
+  tileAtlas: {fileID: 11400000, guid: 0d39032196f56754ea54988fd35a2f42, type: 2}
+  biomeFrequency: 0.01
+  biomeGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 0.99364036, b: 0.9823529, a: 1}
+    key2: {r: 0.1110054, g: 0.3962264, b: 0, a: 1}
+    key3: {r: 0.21396804, g: 1, b: 0, a: 1}
+    key4: {r: 1, g: 0.43137255, b: 0, a: 0}
+    key5: {r: 1, g: 0.6396222, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 16769
+    ctime2: 32768
+    ctime3: 49151
+    ctime4: 65535
+    ctime5: 65535
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 46260
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2
+  biomeMap: {fileID: 0}
+  chunkSize: 20
+  worldSize: 100
+  heightAddition: 50
