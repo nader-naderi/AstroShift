@@ -37,7 +37,7 @@ namespace AstroShift
             if (!Automaton.IsBoosting)
                 return;
 
-            Automaton.Rigidbody.AddRelativeForce(power * Time.fixedDeltaTime * Automaton.transform.up, ForceMode2D.Impulse);
+            Automaton.Rigidbody.AddRelativeForce(power * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
             fuel.ConsumeFuel();
 
             Debug.Log("!!");
