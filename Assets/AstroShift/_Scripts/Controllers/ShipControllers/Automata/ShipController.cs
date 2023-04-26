@@ -9,6 +9,8 @@ namespace AstroShift
     {
         [SerializeField] private bool isPlayer = false;
         [SerializeField] private new Rigidbody2D rigidbody;
+        [SerializeField] private EquipmentsController equipments;
+        [SerializeField] private InventoryController inventory;
 
         public bool IsOn { get; set; } = true;
         public Rigidbody2D Rigidbody { get => rigidbody; private set => rigidbody = value; }
@@ -19,6 +21,11 @@ namespace AstroShift
 
         public bool IsPlayer { get => isPlayer; set => isPlayer = value; }
         public bool IsBoosting { get; set; }
+        public bool IsDoingAbility { get; set; }
+
+        public EquipmentsController Equipments { get; private set; }
+
+        public InventoryController Inventory { get; private set; }
 
         private void Awake()
         {
@@ -37,6 +44,12 @@ namespace AstroShift
                 else
                     module.DisableModule();
             }
+        }
+
+        private void Start()
+        {
+            if (isPlayer)
+                GameManager.Instance.Player = this;
         }
 
         private void Update()
