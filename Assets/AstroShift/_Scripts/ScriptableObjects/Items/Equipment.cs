@@ -3,7 +3,7 @@
 namespace AstroShift
 {
     public enum EEquipemntTypes { Weapon = 0, Head = 1, Chest = 2, Hands = 3, Legs = 4 }
-    [CreateAssetMenu(fileName = "Equipment", menuName = "SOE/Inventory/Equipment", order = 0)]
+    [CreateAssetMenu(fileName = "Equipment", menuName = "Astroshift/Inventory/Equipment", order = 0)]
     public class Equipment : Item
     {
         public bool visualizeit = false;

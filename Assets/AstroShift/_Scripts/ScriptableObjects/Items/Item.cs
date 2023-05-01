@@ -2,7 +2,7 @@
 
 namespace AstroShift
 {
-    [CreateAssetMenu(fileName = "Item", menuName = "SOE/Inventory/Item", order = 0)]
+    [CreateAssetMenu(fileName = "Item", menuName = "Astroshift/Inventory/Item", order = 0)]
     public class Item : ScriptableObject
     {
         public new string name = "New Item";

@@ -3,7 +3,7 @@
 namespace AstroShift
 {
     public enum EConsumptionType { HEALTH, MANA, XP }
-    [CreateAssetMenu(fileName = "Consumption", menuName = "SOE/Inventory/Consumption", order = 0)]
+    [CreateAssetMenu(fileName = "Consumption", menuName = "Astroshift/Inventory/Consumption", order = 0)]
     public class Consumption : Item
     {
         /// <summary>

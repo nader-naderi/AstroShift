@@ -3,7 +3,7 @@
 namespace AstroShift
 {
     public enum ClassType { Human, Monster }
-    [CreateAssetMenu(fileName = "Character", menuName = "SOE/Characters/Character", order = 0)]
+    [CreateAssetMenu(fileName = "Character", menuName = "Astroshift/Characters/Character", order = 0)]
     public class Character : Item
     {
         public ClassType classType;
