@@ -11,6 +11,7 @@ namespace AstroShift
         [SerializeField] private new Rigidbody2D rigidbody;
         [SerializeField] private EquipmentsController equipments;
         [SerializeField] private InventoryController inventory;
+        [SerializeField] private Transform fuselage;
 
         public bool IsOn { get; set; } = true;
         public Rigidbody2D Rigidbody { get => rigidbody; private set => rigidbody = value; }
@@ -26,6 +27,7 @@ namespace AstroShift
         public EquipmentsController Equipments { get; private set; }
 
         public InventoryController Inventory { get; private set; }
+        public Transform Fuselage { get => fuselage; }
 
         private void Awake()
         {

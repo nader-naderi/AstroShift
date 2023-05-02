@@ -1,7 +1,6 @@
 ﻿using System.Security.Cryptography;
 
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace AstroShift
 {
@@ -25,6 +24,15 @@ namespace AstroShift
             ActivateModulePanel(moduleIndex);
         }
 
+        private bool FindAndAttach(Module module)
+        {
+            // Find all attachment nodes on the spaceship
+            ModuleAttachmentNode[] attachmentNodes = GetComponentsInChildren<ModuleAttachmentNode>();
+
+            // No attachment node was found for the module
+            return false;
+        }
+
         public void OnClickModuleItem()
         {
             // TODO:
@@ -32,6 +40,23 @@ namespace AstroShift
             // Start the Drag n Drop Phase
             // Can Attach the Module on the Space Ship
             // On Mosue Right Click Trash it
+
+            // Instantiate the module prefab
+            //Module newModule = Instantiate(modulePrefab);
+
+            //// Set the parent of the new module to the spaceship
+            //newModule.transform.SetParent(transform);
+
+            //// Attach the new module to a nearby attachment node on the spaceship
+            //if (FindAndAttach(newModule))
+            //{
+            //    Debug.Log("Module attached!");
+            //}
+            //else
+            //{
+            //    // If the module couldn't be attached, destroy it
+            //    Destroy(newModule.gameObject);
+            //}
         }
 
         public void OnClickConfirmToPlay()
@@ -61,20 +86,7 @@ namespace AstroShift
 
         private bool IsToggle()
         {
-            Debug.Log("AA");
             return previousModuleIndex == currentModuleIndex;
-        }
-    }
-
-    public class UIModuleGroupBtn : MonoBehaviour
-    {
-        [SerializeField] private Image groupPortraite;
-        [SerializeField] private ItemData[] modules;
-        [SerializeField] Transform panelGroup;
-
-        public void OnClickBtn()
-        {
-
         }
     }
 }

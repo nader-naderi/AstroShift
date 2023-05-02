@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 7276601790029495243}
   - component: {fileID: 7276601790029495240}
   - component: {fileID: 6990477431936480015}
+  - component: {fileID: -4969020576082701162}
   m_Layer: 0
   m_Name: ShipModules_Head
   m_TagString: Untagged
@@ -154,3 +155,17 @@ PolygonCollider2D:
       - {x: 1, y: -0.555}
       - {x: 1.06, y: -0.475}
       - {x: 1.06, y: -0.325}
+--- !u!114 &-4969020576082701162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276601790029495241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb5bfdd7ace1694887b06ff42025f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upperAttachPoint: {fileID: 0}
+  lowerAttachPoint: {fileID: 7276601789214177750}

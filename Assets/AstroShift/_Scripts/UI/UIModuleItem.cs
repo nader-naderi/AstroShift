@@ -3,13 +3,20 @@ using UnityEngine.UI;
 
 namespace AstroShift
 {
-    public class UIModuleItem : MonoBehaviour
+    public class UIModuleItem : UIDraggable
     {
-        public Image modulePortraite;
+        [SerializeField] Image modulePortraite;
+        [SerializeField] ModuleData data;
+        public void Init(ModuleData data)
+        {
+            this.data = data;
+            modulePortraite.sprite = data.iconSprite;
+        }
 
         public void OnClickBtn()
         {
-            // 
+            // Initialize DnD
+
         }
     }
 }

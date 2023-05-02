@@ -13,7 +13,9 @@ namespace AstroShift
     {
         public static UIManager Instance {get; private set;}
         public GameObject NoFuelAlert { get => noFuelAlert; }
+        public Canvas CustomizeCanvas { get => customizeCanvas; }
 
+        [SerializeField] private Canvas customizeCanvas;
         [SerializeField] private UIBar fuelBar;
         [SerializeField] private UIBar healthBar;
         [SerializeField] private UIBar boostBar;

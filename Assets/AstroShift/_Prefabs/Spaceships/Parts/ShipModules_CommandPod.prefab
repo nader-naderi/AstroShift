@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 96658189200074043}
   - component: {fileID: 8935233547004544413}
   - component: {fileID: 4796769849240802168}
+  - component: {fileID: 7322243774843134981}
   m_Layer: 6
   m_Name: ShipModules_CommandPod
   m_TagString: Untagged
@@ -223,3 +224,17 @@ PolygonCollider2D:
       - {x: 0.37, y: -1.615}
       - {x: 0.55, y: -1.5949999}
       - {x: 0.78, y: -1.5649999}
+--- !u!114 &7322243774843134981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8020495666617688983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb5bfdd7ace1694887b06ff42025f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upperAttachPoint: {fileID: 335191697}
+  lowerAttachPoint: {fileID: 1068032192}
